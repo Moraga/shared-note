@@ -1,0 +1,111 @@
+body {
+    font-family: Thonburi
+}
+
+.navbar {
+    background: #009788;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    margin-bottom: 10px;
+    min-height: 40px;
+}
+
+.navbar h3 {
+    font-size: 18px;
+    margin: 0;
+    line-height: 38px;
+    text-align: center;
+}
+
+.navbar .back {
+    line-height: 36px;
+}
+
+.disc {
+    background: #f3f2f1;
+    border-radius: 50%;
+    height: 50px;
+    line-height: 48px;
+    position: absolute;
+    text-align: center;
+    width: 50px;
+}
+
+.item {
+    margin-bottom: 10px;
+    min-height: 50px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.item .glyphicon {
+    display: none;
+}
+
+.item .text {
+    font-size: 18px;
+}
+
+.item.checked {
+    background: #f7f7f7;
+}
+
+.item.checked .disc {
+    background: #ccc;
+    color: #fff;
+}
+
+.topic .item:nth-child(odd) {
+    padding-left: 65px;
+    padding-right: 15px;
+}
+
+.topic .item:nth-child(odd) .disc {
+    left: 5px;
+}
+
+.topic .item:nth-child(even) {
+    padding-right: 65px;
+    padding-left: 15px;
+    text-align: right;
+}
+
+.topic .item:nth-child(even) .disc {
+    right: 5px;
+}
+
+.comments {
+    font-size: 12px;
+}
+
+.comment {
+    display: none;
+    margin-top: 3px;
+}
+
+.comments > .comment:last-child {
+    display: block;
+}
+
+.checked .comment {
+    display: block;
+    margin: 7px 0;
+}
+
+.push {
+    background-image: linear-gradient(to bottom, #E8E6E4, #E6E4E3);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 7px 10px 7px 15px;
+    position: fixed;
+}
+
+.push [disabled] {
+    opacity: .2;
+}
+
+.form-left {float: left;}
+.form-right {float: right;}
+.form-center {margin-right: 90px;}

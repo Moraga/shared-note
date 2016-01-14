@@ -1,0 +1,57 @@
+<head>
+    <meta charset="utf-8">
+    <title>ideas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+
+<body>
+    {{> hello}}
+</body>
+
+<template name="hello">
+    <nav class="navbar">
+        <div class="container-fluid">
+            {{#if area.area }}
+                <span class="glyphicon glyphicon-arrow-left pull-left back"></span>
+            {{/if}}
+            <h3>{{ area.text }}</h3>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="topic">
+            {{#if items.count}}
+                {{#each items}}
+                    {{> item}}
+                {{/each}}
+            {{else}}
+                Crie o primeiro item usando a barra abaixo.
+            {{/if}}
+        </div>
+    </div>
+    <form class="push">
+        <div class="form-right">
+            <button type="button" class="btn inside" {{ depth }}>
+                <span class="glyphicon glyphicon-share-alt"></span>
+            </button>
+            <button type="button" class="btn">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </div>
+        <div class="form-center">
+            <input type="text" name="text" class="form-control" autocomplete="off">
+        </div>
+    </form>
+</template>
+
+<template name="item">
+    <div class="item {{#if checked this}}checked{{/if}}">
+        <div class="disc">ME</div>
+        <div class="text">{{ text }}</div>
+        <span class="expand glyphicon glyphicon-comment"></span>
+        <div class="comments">
+            {{#each comment in comments}}
+                <div class="comment">{{ comment }}</div>
+            {{/each}}
+        </div>
+    </div>
+</template>
